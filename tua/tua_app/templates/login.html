@@ -1,0 +1,17 @@
+{%extends 'nine.html'%}
+
+{% block title %}вход{%endblock%}
+
+{% block content %}
+<form>
+    <label for="password">Пароль*</label>
+    <div class="input-container">
+      <span class="icon"><img src="photo/padlock 1.png" alt=""></span>
+        {%csrf_token%}
+        {{form}}
+      <span class="password-toggle">👁</span>
+    </div>
+    <button type="submit">Войти</button>
+    <p>Если у вас нет аккаунта, перейдите по <a href="{%url 'sign_up'%}">ссылке</a></p>
+  </form>
+  {%endblock%}

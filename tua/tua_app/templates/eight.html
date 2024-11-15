@@ -1,0 +1,49 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Home</title>
+    <link rel="stylesheet" href="{%static './css/eight.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{%static './js/script.js'%}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="con">            
+                <img  src="{%static './photo/Vector (2).png'%}" class="logo"></img>
+                <p class="head-txt">Green Home</p>
+                <a href="{%url 'home'%}" class="back-arrow">←</a>
+            </div>
+        </header>
+        <section class="menu">
+            {% if not user.is_authenticated %}
+            <a href="{% url 'sign_up' %}" class="menu-item">Регистрация</a>
+            <a href="{%url 'login_page'%}" class="menu-item">Вход</a>
+            {% else %}
+            <a href="{% url 'logout_action' %}"></a>
+                <p class="menu-item" alt="logout">{{user.username}}</p>
+                <a href="{% url 'logout_action' %}">выход</ф>
+            </a>
+            {%endif%}
+        </section>
+        </header>
+
+        <!-- New Item Section -->
+        <section class="new-item">
+            <img src="photo/image 15.png" alt="Шаровидная туя">
+        </section>
+
+        <section class="categories">
+            <h2 class="ht">Отличный выбор, свяжитесь с нашим консультантом для дальнейшей оплаты.</h2>
+        </section>
+        <div class="cons">
+            <button type="submit">Связаться с консультантом</button>
+        </div>
+    </div>
+</body>
+</html>

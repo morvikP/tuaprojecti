@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Home</title>
+    <link rel="stylesheet" href="{% static 'css/third.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="con">            
+                <img src="{% static 'photo/Vector (2).png' %}" class="logo" alt="Logo"/>
+                <p class="head-txt">Green Home</p>
+                <a href="{% url 'home' %}" class="back-arrow">←</a>
+            </div>
+        </header>
+        
+        <!-- Menu -->
+        <section class="menu">
+            {% if not user.is_authenticated %}
+            <a href="{% url 'sign_up' %}" class="menu-item">Регистрация</a>
+            <a href="{%url 'login_page'%}" class="menu-item">Вход</a>
+            {% else %}
+            <a href="{% url 'logout_action' %}"></a>
+                <p class="menu-item" alt="logout">{{user.username}}</p>
+                <a href="{% url 'logout_action' %}">выход</ф>
+            </a>
+            {%endif%}
+        </section>
+
+        <!-- Title -->
+        <h2 class="section-title">Ландшафтный дизайн</h2>
+
+        <!-- Product Section -->
+        <section class="product-grid">
+            {% for plan in plans %}
+            <div class="product">
+                {% if plan.image %}
+                    <img src="{{ plan.image.url }}" alt="{{ plan.title }}">
+                {% endif %}
+                <div class="product-info">
+                    <div class="price">Price: {{ plan.price }}</div>
+                    <div class="name">{{ plan.title }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>

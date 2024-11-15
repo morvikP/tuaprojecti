@@ -1,0 +1,51 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Home Vacancies</title>
+    <link rel="stylesheet" href="{%static './css/seven.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{%static './js/script.js'%}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="con">
+                <img src="{%static './photo/Vector (2).png'%}" class="logo" />
+                <p class="head-txt">Green Home</p>
+                <a href="{%url 'home'%}" class="back-arrow">←</a>
+            </div>
+        </header>
+    
+        <section class="menu">
+            {% if not user.is_authenticated %}
+            <a href="{% url 'sign_up' %}" class="menu-item">Регистрация</a>
+            <a href="{%url 'login_page'%}" class="menu-item">Вход</a>
+            {% else %}
+            <a href="{% url 'logout_action' %}"></a>
+                <p class="menu-item" alt="logout">{{user.username}}</p>
+                <a href="{% url 'logout_action' %}">выход</ф>
+            </a>
+            {%endif%}
+        </section>
+    
+        <div class="content">
+            <p class="s">Вакансии</p>
+            <div class="product">
+                {% for vak in vaks %}
+                <div class="vacancy-item">
+                    <img class="wq" src="{{ vak.image.url }}" alt="Cotton picker" />
+                    <div class="vacancy-details">
+                        <h3>{{ vak.title }}</h3>
+                        <p>Price: {{ vak.price }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

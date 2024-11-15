@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CCF5BA;
+}
+
+.container {
+width: 360px;
+height: 800px;
+top: -360px;
+left: 220px;
+gap: 0px;
+opacity: 0px;
+
+    
+}
+
+/* Header */
+header {
+    width: 360px;
+    height: 80px;
+    padding: 0px 20px 0px 20px;
+    gap: 0px;
+
+    background: #417644;
+    display: inline-block;
+}
+.con{
+    width: 320px;
+    height: 80px;
+    left: 20px;
+    padding: 24px 41px 20px 0px;
+    gap: 0px;
+
+    display: flex;
+    align-items: center;
+}
+.head-txt{
+    width: 238px;
+    height: 36px;
+    top: 24px;
+    left: 41px;
+    gap: 0px;
+
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36.31px;
+    text-align: center;
+    color: #EAF98C;
+}
+.menu{
+    background-color:#7A5D32;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    position: fixed ;
+    z-index: 15;
+    margin-top: 0px;
+    margin-left: 100%;
+}
+.menu-item{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 32px;
+    height: 32px;
+    top: 24px;
+    padding: 0px 4px 0px 4px;
+    gap: 0px;
+
+    color: black;
+}
+
+.back-arrow{
+    padding-left: 20px;
+    font-size: 40px;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Product Grid */
+.section-title{
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.product {
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-info {
+    color: #333;
+}
+
+.product-info .price {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-info .name {
+    font-size: 14px;
+}

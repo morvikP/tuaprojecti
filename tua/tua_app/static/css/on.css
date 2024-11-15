@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #CCF5BA;
+}
+
+.container {
+width: 360px;
+height: 800px;
+top: -360px;
+left: 220px;
+gap: 0px;
+opacity: 0px;
+
+    
+}
+
+/* Header */
+header {
+    width: 360px;
+    height: 80px;
+    padding: 0px 20px 0px 20px;
+    gap: 0px;
+    opacity: 0px;
+    background: #417644;
+    display: inline-block;
+}
+.con{
+    width: 320px;
+    height: 80px;
+    left: 20px;
+    padding: 24px 41px 20px 0px;
+    gap: 0px;
+    opacity: 0px;
+    display: flex;
+    align-items: center;
+}
+.head-txt{
+    width: 238px;
+    height: 36px;
+    top: 24px;
+    left: 41px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36.31px;
+    text-align: center;
+    color: #EAF98C;
+}
+
+.logo {
+    width: 32px;
+    height: 32px;
+    top: 24px;
+    padding: 0px 4px 0px 4px;
+    gap: 0px;
+    opacity: 0px;
+    color: black;
+}
+
+.back-arrow{
+    padding-left: 20px;
+    font-size: 40px;
+}
+  
+  /* Register form styling */
+  .register-form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #CCF5BA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .register-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .register-form label {
+    width: 100%;
+    font-size: 1em;
+    margin-bottom: 5px;
+    color: #000;
+    display: block;
+  }
+  
+  .register-form input {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #50794b;
+    color: #fff;
+    font-size: 1em;
+  }
+  
+  .register-form button {
+    width: 100%;
+    max-width: 360px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #2e5e36;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .register-form button:hover {
+    background-color: #2a5431;
+  }
+  
+  .register-form p {
+    font-size: 0.9em;
+    color: #000;
+    margin-top: 10px;
+  }
+  .input-container {
+    position: relative;
+}
+.password-toggle,.password-toggle1 {
+    position: absolute;
+    right: 10px;
+    margin-top: 7px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.in{
+  color: #000000; 
+  background-color: #ffffff; 
+}
+  .register-form a {
+    color: #0000ee;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+.helptext{
+  display: none !important;
+}
